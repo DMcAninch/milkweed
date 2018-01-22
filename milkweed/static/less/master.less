@@ -1,0 +1,100 @@
+/* Figure out how to make borders work for menu items
+*/
+
+@import "colorschemes";
+
+@nav-text-size: 1.5rem;
+@title-text-size: 2rem;
+@menu-title-text-size: @title-text-size;
+@brand-text-size: @title-text-size;
+
+@panel-border-color: @tertiarycolor-offwhite;
+@panel-border-size: 3px;
+@panel-border-type: solid;
+@panel-border: @panel-border-size @panel-border-type @panel-border-color;
+
+@padding: .5rem;
+@panel-padding: @padding;
+@menu-padding: @padding;
+@menu-item-padding: @menu-padding;
+@title-padding: @padding;
+
+@margin: 5px;
+@panel-margin: @margin;
+@menu-margin: @margin;
+@menu-item-margin: @menu-margin;
+@title-margin: @margin;
+
+
+@panel-text-color: @panel-border-color;
+@header-text-color: @panel-text-color;
+@sidepanel-text-color: @panel-text-color;
+
+@headerbar-bg-color: @primarycolor;
+@sidepanel-bg-color: @secondarycolor;
+
+* {
+  font-family: sans-serif;
+}
+
+
+
+#sidepanel{
+  flex-direction: column;
+  position: sticky;
+  top: @brand-text-size + (2 * @panel-padding);
+  width: auto;
+  *{
+    color: @sidepanel-text-color;
+    padding: @panel-padding;
+    background-color: @sidepanel-bg-color;
+  }
+}
+
+.container{
+  display: flex;
+
+  &.headerbar{
+    flex-direction: row;
+    border-bottom: @panel-border;
+    height: auto;
+    padding: @panel-padding;
+    background-color: @headerbar-bg-color;
+    color: @header-text-color;
+  }
+  &.left-panel{
+    float: left;
+    #sidepanel;
+    border-right: @panel-border;
+  }
+  &.right-panel{
+    float:right;
+    #sidepanel;
+    border-left: @panel-border;
+  }
+  &.main{
+    flex-direction: column;
+  }
+}
+
+.panel{
+  text-align: center;
+
+  &.title{
+    font-size: @title-text-size;
+    display: block;
+    padding: @title-padding;
+    margin: @title-margin;
+  }
+}
+
+.menu{
+  display: flex;
+  flex-direction: column;
+
+  a{
+    display:block;
+    padding: @menu-item-padding;
+    color: inherit;
+  }
+}

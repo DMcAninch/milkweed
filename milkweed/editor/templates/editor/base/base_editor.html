@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %}
+    <meta lang='en-US' charset="utf-8">
+    <title>{% block title %}Milkweed Content Authoring{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/master.css' %}">
+  </head>
+  <body>
+    <header>
+      <div class="header-panel container">
+        {% block headerbar %}
+
+        {% endblock %}
+      </div>
+    </header>
+    <div class="left-panel panel container">
+      {% block left-panel %}
+
+      {% endblock %}
+    </div>
+    <div class="main" role="main container">
+      {% block main %}
+
+      {% endblock %}
+    </div>
+    <div class="right-panel panel container">
+      {% block right-panel %}
+
+      {% endblock %}
+    </div>
+  </body>
+</html>

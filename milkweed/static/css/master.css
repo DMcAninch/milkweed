@@ -1,0 +1,71 @@
+/*
+olive green
+primary: #83ba1c
+secondary: #1cbaa2
+tertiary: #531cba
+quarternary: #ba1c34
+*/
+* {
+  font-family: sans-serif;
+}
+#sidepanel {
+  flex-direction: column;
+  position: sticky;
+  top: 3rem;
+  color: #d9f9ff;
+  padding: 0.5rem;
+  background-color: #63ba41;
+  width: auto;
+}
+.container {
+  display: flex;
+}
+.container.headerbar {
+  flex-direction: row;
+  border-bottom: 3px solid #d9f9ff;
+  height: auto;
+  padding: 0.5rem;
+  background-color: #ba5b41;
+  color: #d9f9ff;
+}
+.container.left-panel {
+  float: left;
+  flex-direction: column;
+  position: sticky;
+  top: 3rem;
+  color: #d9f9ff;
+  padding: 0.5rem;
+  background-color: #63ba41;
+  width: auto;
+  border-right: 3px solid #d9f9ff;
+}
+.container.right-panel {
+  float: right;
+  flex-direction: column;
+  position: sticky;
+  top: 3rem;
+  color: #d9f9ff;
+  padding: 0.5rem;
+  background-color: #63ba41;
+  width: auto;
+  border-left: 3px solid #d9f9ff;
+}
+.container.main {
+  flex-direction: column;
+}
+.panel {
+  text-align: center;
+}
+.panel.title {
+  font-size: 2rem;
+  display: block;
+  padding: 0.5rem;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+.menu a {
+  display: block;
+  padding: 0.5rem;
+}
